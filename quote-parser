@@ -1,0 +1,17 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = "http://quotes.toscrape.com/"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+quotes = soup.find_all("span", {"class": "text"})
+authors = soup.find_all("small", {"class": "author"})
+found_quote = 0
+with open("quote.txt", "w", encoding="utf-8") as file:
+    for i in range(len(quotes)):
+        quote_text = quotes[i].text
+        author_text = authors[i].text
+
+        file.write(quote_text + "\n" + author_text + 2*"\n")
+        found_quote += 1
+print(f"Готово! Найдено {found_quote} цитат.")
