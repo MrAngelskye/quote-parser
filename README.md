@@ -21,9 +21,10 @@ pip install requests beautifulsoup4
 ## Usage
 Run the script:
 python main.py
-The quotes will be saved to quote.txt.
-```bash
 
-Notes
+The quotes will be saved to quote.txt.
+
+## Notes
 This project is for learning purposes and portfolio.
 The website is designed for educational scraping exercises
+```bash
