@@ -14,4 +14,4 @@ with open("quote.txt", "w", encoding="utf-8") as file:
 
         file.write(quote_text + "\n" + author_text + 2*"\n")
         found_quote += 1
-print(f"Готово! Найдено {found_quote} цитат.")
+print(f"Done! {found_quote} quotes found.")
